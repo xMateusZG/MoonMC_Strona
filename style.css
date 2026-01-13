@@ -1,0 +1,176 @@
+/* Reset i podstawy */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+/* Gradient tła dla całej strony – jednolity */
+body {
+    font-family: 'Arial', sans-serif;
+    overflow-x: hidden;
+    background: linear-gradient(135deg, #a0cfff 0%, #cfa0ff 100%);
+    background-attachment: fixed; /* gradient nie przesuwa się przy scrollu */
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    z-index: 10;
+    position: relative;
+}
+
+header .logo {
+    width: 120px;
+    transition: transform 0.3s;
+}
+
+header .logo:hover {
+    transform: rotate(5deg);
+    cursor: pointer;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    font-size: 1rem;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #ffebff;
+}
+
+/* Hero section */
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 50px 50px 150px 50px;
+    flex-wrap: wrap;
+}
+
+/* Hero text */
+.hero-text {
+    max-width: 600px;
+    color: white;
+}
+
+.hero-text h1 {
+    font-size: 4rem;
+    background: linear-gradient(90deg, #ffebff, #a0cfff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: textGlow 2s infinite alternate;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 10px rgba(0,0,0,0.3);
+}
+
+@keyframes textGlow {
+    0% { text-shadow: 0 0 10px rgba(255,255,255,0.5), 0 0 20px rgba(255,255,255,0.3); }
+    100% { text-shadow: 0 0 20px rgba(255,255,255,1), 0 0 40px rgba(255,255,255,0.6); }
+}
+
+.hero-text p {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+    line-height: 1.4;
+}
+
+/* CTA Button */
+#ctaButton {
+    padding: 15px 35px;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 25px;
+    background-color: rgba(255,255,255,0.8);
+    color: #333;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+#ctaButton:hover {
+    transform: scale(1.05);
+    background-color: rgba(255,255,255,1);
+}
+
+/* Hero skin */
+.hero-skin {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 0;
+}
+
+.skin-img {
+    width: 300px;
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-20px); }
+}
+
+/* Discord logo */
+.discord-logo {
+    width: 100px;
+    margin-top: 20px;
+    transition: transform 0.3s;
+}
+
+.discord-logo:hover {
+    transform: scale(1.2);
+    cursor: pointer;
+}
+
+/* Features section */
+.features {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    padding: 100px 20px;
+    flex-wrap: wrap;
+    color: white;
+    text-align: center;
+}
+
+.feature {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 30px;
+    border-radius: 20px;
+    width: 250px;
+    transition: transform 0.3s, background 0.3s;
+}
+
+.feature:hover {
+    transform: translateY(-10px);
+    background: rgba(255, 255, 255, 0.2);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 50px 20px;
+    color: white;
+    background-color: rgba(0,0,0,0.2);
+}
